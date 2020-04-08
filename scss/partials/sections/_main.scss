@@ -1,0 +1,61 @@
+main {
+  background-color: white;
+  margin-left: 10vw;
+  user-select: none;
+
+  @media only screen and (max-width: $mobile-breakpoint) {
+    margin-left: 0;
+  }
+
+  .container {
+    padding: 6% 0;
+  }
+
+  .banner {
+    flex-basis: 60%;
+
+    @media only screen and (max-width: $mobile-breakpoint) {
+      display: none;
+    }
+  }
+
+  .blurb {
+    flex-basis: 40%;
+
+    @media only screen and (max-width: $mobile-breakpoint) {
+      flex-basis: 100%;
+    }
+
+    p {
+      @media only screen and (max-width: $mobile-breakpoint) {
+        font-size: 1.1em;
+        font-weight: 300;
+        padding: 2% 0;
+      }
+    }
+  }
+
+  .content {
+    display: flex;
+    justify-content: space-between;
+    flex-basis: 100%;
+  }
+}
+
+.container {
+  position: relative;
+  margin: 0 auto;
+  width: 70vw;
+  max-width: 0.7 * $max-breakpoint;
+
+  @media only screen and (max-width: $mobile-breakpoint) {
+    width: 80vw;
+  }
+}
+
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+}

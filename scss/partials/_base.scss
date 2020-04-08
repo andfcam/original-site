@@ -1,0 +1,148 @@
+* {
+  scroll-behavior: smooth;
+}
+
+body {
+  color: $primary-text-color;
+  font-family: $font-stack;
+  font-weight: 400;
+  font-size: 1vw;
+  margin: 0;
+  padding: 0;
+
+  @media only screen and (max-width: $mobile-breakpoint) {
+    font-size: 2vw;
+  }
+
+  @media only screen and (min-width: $max-breakpoint) {
+    font-size: 0.01 * $max-breakpoint;
+  }
+}
+
+a {
+  color: #777;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+img {
+  max-width: 100%;
+  transition: 0.25s;
+}
+
+h1 {
+  color: $secondary-text-color;
+  font-weight: 900;
+  letter-spacing: -0.025em;
+  font-size: 8.5em;
+  line-height: 85%;
+  margin: 5% 0;
+  text-align: center;
+
+  @media only screen and (max-width: $mobile-breakpoint) {
+    margin: 20% 0 7.5% 0;
+  }
+}
+
+h2 {
+  color: $secondary-text-color;
+  font-weight: 200;
+  font-size: 2.5em;
+  text-align: center;
+
+  span {
+    color: $primary-text-color;
+    font-size: 0.5em;
+    font-weight: 300;
+    font-style: italic;
+  }
+}
+
+h3 {
+  font-weight: 900;
+  font-size: 5.7em;
+  margin: 0 0 10% 0;
+
+  @media only screen and (max-width: $mobile-breakpoint) {
+    font-size: 6.5em;
+    text-align: center;
+    margin-bottom: 5%;
+  }
+}
+
+h4 {
+  color: $tertiary-text-color;
+  font-weight: 200;
+  font-size: 1.6em;
+  margin-bottom: 0;
+
+  @media only screen and (max-width: $mobile-breakpoint) {
+    font-size: 2em;
+    line-height: 1em;
+    text-align: center;
+    margin-top: 1em;
+  }
+
+  &:nth-child(3) {
+    margin-top: 0;
+    margin-bottom: 7.5%;
+    font-style: italic;
+  }
+}
+
+h5 {
+  font-weight: 800;
+  font-size: 1.2em;
+  margin-bottom: 0;
+
+  @media only screen and (max-width: $mobile-breakpoint) {
+    font-size: 1.4em;
+  }
+}
+
+button {
+  font-family: $font-stack;
+  font-size: 1.2em;
+  font-weight: 600;
+  position: relative;
+  border: 0;
+  border-radius: 5px;
+  padding: 5px 25px;
+  display: inline-block;
+  text-align: center;
+  color: $secondary-text-color;
+  box-shadow: 0px 4px $primary-shadow;
+  background-color: $primary-color;
+  box-sizing: border-box;
+
+  &:active {
+    top: 4px;
+    box-shadow: 0 0 $primary-shadow;
+    background-color: $primary-color;
+  }
+}
+
+input,
+textarea {
+  width: 100%;
+  margin-bottom: 3%;
+  padding-left: 2%;
+  border: 1px solid #777;
+  border-radius: 4px;
+  font-family: $font-stack;
+  font-weight: 400;
+  font-size: 1.2em;
+  line-height: 200%;
+}
+
+textarea {
+  line-height: 150%;
+}
+
+hr {
+  border: none;
+  background-color: $tertiary-text-color;
+  color: $tertiary-text-color;
+  width: 95%;
+  height: 1px;
+}

@@ -1,0 +1,54 @@
+#surveyor {
+  .blurb {
+    h3 {
+      @media only screen and (max-width: $mobile-breakpoint) {
+        text-decoration: underline rgb(44, 184, 97);
+      }
+    }
+  }
+
+  .banner {
+    text-align: right;
+  }
+
+  .content {
+    flex-wrap: wrap;
+    text-align: right;
+
+    article {
+      display: flex;
+      align-items: center;
+      flex-basis: 29%; /* < 33% to leave space between skills*/
+
+      @media only screen and (max-width: $mobile-breakpoint) {
+        flex-basis: 47.5%; /* < 50% to leave space between skills*/
+        font-size: 1.1em;
+      }
+
+      div {
+        display: grid;
+        grid-template-rows: 1fr;
+        grid-template-columns: 1fr;
+
+        flex-basis: 20%;
+        padding: 10% 5% 0 0;
+
+        img {
+          grid-row: 1;
+          grid-column: 1;
+        }
+
+        &:nth-child(2) {
+          display: inline;
+          flex-basis: 80%;
+          padding: 0;
+
+          p {
+            font-size: 0.9em;
+            margin-top: 2%;
+          }
+        }
+      }
+    }
+  }
+}

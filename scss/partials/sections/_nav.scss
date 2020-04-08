@@ -1,0 +1,40 @@
+nav {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-sizing: border-box;
+  z-index: 2;
+  margin: 0;
+  padding: 2% 0;
+  border-right: 1px solid #777;
+  height: 100vh;
+  width: 10vw;
+  text-align: center;
+
+  @media only screen and (max-width: $mobile-breakpoint) {
+    display: none;
+  }
+
+  p {
+    color: $primary-color;
+    margin-bottom: 0;
+  }
+
+  a {
+    display: block;
+    color: #444;
+    font-weight: 400;
+    font-size: 1.7em;
+    text-decoration: none;
+    transition: 0.25s;
+    &:hover {
+      text-decoration: underline $primary-color;
+      font-size: 1.8em;
+    }
+  }
+
+  img:hover {
+    transform: scale(1.1);
+  }
+}

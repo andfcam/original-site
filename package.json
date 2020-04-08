@@ -1,0 +1,9 @@
+{
+  "name": "andy",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "sass": "^1.25.1-test.1"
+  }
+}

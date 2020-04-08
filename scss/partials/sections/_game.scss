@@ -1,0 +1,110 @@
+#game {
+  position: absolute;
+  overflow: hidden;
+  margin: 0 auto;
+  z-index: 1;
+
+  @media only screen and (max-width: $mobile-breakpoint) {
+    display: none;
+  }
+}
+
+#theodolite {
+  transition: 0s;
+  z-index: 3;
+  cursor: pointer;
+
+  &:hover {
+    transition: 0.25s;
+    transform: scale(1.2);
+
+    @media only screen and (max-width: $mobile-breakpoint) {
+      transition: 0s;
+      transform: none;
+      cursor: auto;
+    }
+  }
+}
+
+#click-me {
+  position: absolute;
+  z-index: 2;
+  top: 50%;
+  right: 100%;
+  max-width: 8%;
+
+  @media only screen and (max-width: $mobile-breakpoint) {
+    display: none;
+  }
+}
+
+.enlarged {
+    top: 40% !important;
+    left: 40% !important;
+    max-width: 16% !important;
+  }
+
+.destructable {
+  transition: 0.2s;
+}
+
+.destroyed {
+  opacity: 0;
+  visibility: hidden;
+}
+
+#narrator {
+  visibility: hidden;
+  position: fixed;
+  z-index: 3;
+  min-width: 10%;
+  max-width: 40%;
+  top: 7vw;
+  margin-left: 5%;
+  padding: 1% 4%;
+  border-radius: 10px;
+  background-color: #444;
+  opacity: 0.9;
+  color: $secondary-text-color;
+  font-weight: 300;
+  font-size: 1.8em;
+  font-style: italic;
+  text-align: center;
+
+  &::before {
+    // arrow on speech bubble
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-left: -15px;
+    border-width: 15px;
+    border-style: solid;
+    border-color: #444 #444 transparent transparent;
+  }
+
+  /* remove blue border on focus */
+  input {
+    width: 30%;
+    height: 1.6em;
+    border: none;
+    border-radius: 4px;
+    background-color: white;
+    padding-left: 1.5%;
+    color: black;
+    font-size: 0.9em;
+    font-family: $font-stack;
+    font-weight: 300;
+
+    &::placeholder {
+      color: #777;
+      font-style: italic;
+    }
+  }
+
+  button {
+    margin-left: 0.25em;
+    width: 2em;
+    padding: 0;
+  }
+}

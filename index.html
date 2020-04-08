@@ -1,0 +1,285 @@
+<!-- Personal Notes
+
+Mobile:
+Rotate books 90deg and stack vertically
+
+Experiment with title, text and hr overlaps across the nology/survey banners
+Experiment with title text JS effects
+
+Replace punk avatar with commision
+    http://preview.codecanyon.net/item/magic-hover-js/full_screen_preview/23377263
+    the monotone person, hovering for colour and personality
+    'add life and colour to your designs'
+
+Hover over survey acronyms for tooltips
+Tooltip / arrow to alert the user they can scroll
+'bye' or 'thanks' speech bubble on contact avatar
+Create bubbles yourself
+
+Duck quacks on click (nology)
+click on book, opens up as a popup, can read through spread of stuff I know, examples etc. Presented like a book.
+
+aria?
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel='icon' href='./img/favicon.png' type='image/x-icon' />
+    <link rel="stylesheet" type="text/css" href="./scss/style.css">
+    <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="./js/index.js"></script>
+    <script src="./js/game.js"></script>
+    <script src="./js/ship.js"></script>
+    <script src="./js/laser.js"></script>
+    <script src="./js/utils.js"></script>
+    <script src="./js/script.js"></script>
+    <title>Hi, I'm Andy Cameron</title>
+</head>
+
+<body>
+
+    <nav>
+        <a href="#a-andy"><img src="./img/avatar.png" alt="Go back to the top"></a>
+        <div>
+            <p>taught by</p>
+            <a href="#a-nology">_nology</a>
+            <p>previously a</p>
+            <a href="#a-surveyor">Surveyor</a>
+            <p>find me here</p>
+            <a href="#a-contact">Contact</a>
+        </div>
+        <div id="cv">
+            <p>download my</p>
+            <a type="submit">CV</a>
+        </div>
+    </nav>
+
+    <header><a id="a-andy"></a>
+        <div class="container">
+            <div class="flex splash">
+                <div>
+                    <h1>
+                        Andy <br>
+                        Cameron
+                    </h1>
+                    <hr>
+                    <h2><span>a</span> Front-end Developer<br>
+                        <span>from</span> Guildford, UK
+                    </h2>
+                    <p>
+                        Hi, thanks for visiting.<br><br>
+                        Don't be fooled, I don't have a pink mohican. That's a placeholder image. I <em>do</em> though
+                        have a rectangle for a nose and a love for the colour orange.<br><br>
+                        When I'm not working, you'll often find me playing with tech or losing badly at games. And, when
+                        I want to leave the screens behind, I'll set off hiking somewhere. The more ambitious - the
+                        better.
+                    </p>
+                    <img src="./img/hello.png" id="hello" alt="Hello!">
+                </div>
+                <div>
+                    <img src="./img/avatar.png" alt="Andy Cameron's avatar">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main><a id="a-nology"></a>
+        <section id="nology">
+            <div class="container flex">
+                <div class="banner">
+                    <img src="./img/nology/banner.png" alt="A view from the _nology classroom">
+                </div>
+                <div class="blurb">
+                    <h3>_nology</h3>
+                    <h4>Front-end Web Development Student</h4>
+                    <h4>London, Spring 2020</h4>
+                    <hr>
+                    <p>
+                        <!-- A 12-week intensive course teaching the fundamentals of web development, based around real project work for clients.<br>
+                        Some of these key skills can be seen below. -->
+                        I start this course with the hope to kickstart a career in a role that rewards both logic
+                        and imagination.
+                        I want to push myself, meet new people, learn all I can and throw everything I have into the
+                        next three months. I'm sure it'll be a blast!
+                    </p>
+                    <hr>
+                </div>
+                <div class="content">
+                    <span><img src="./img/nology/book/html.png" alt="A book spine for 'HTML5'"></span>
+                    <span><img src="./img/nology/book/css.png" alt="A book spine for 'Learning CSS'"></span>
+                    <span><img src="./img/nology/book/js.png" alt="A book spine for 'JavaScript'"></span>
+                    <span><img src="./img/nology/book/bootstrap.png"
+                            alt="A book spine for 'The Guide to Bootstrap'"></span>
+                    <span><img src="./img/nology/book/jquery.png" alt="A book spine for 'jQuery Cookbook'"></span>
+                    <span><img src="./img/nology/book/node.png" alt="A book spine for 'Node.js'"></span>
+                    <span><img src="./img/nology/book/sass.png" alt="A book spine for 'Jump Start Sass'"></span>
+                    <span><img src="./img/nology/book/firebase.png" alt="A book spine for 'Build with Firebase'"></span>
+                    <span><img src="./img/nology/book/react.png" alt="A book spine for 'Exploring React'"></span>
+                    <span><img src="./img/nology/book/soft.png" alt="A book spine for 'Soft Skills'"></span>
+                    <span id="duck"><img src="./img/nology/rubber-duck.png" alt="Susan, Andy's rubber duck"></span>
+                </div>
+            </div>
+        </section>
+
+        <hr><a id="a-surveyor"></a>
+
+        <section id="surveyor">
+            <div id="game"></div>
+            <div id="narrator">
+                <span id="speech-bubble"></span>
+            </div>
+            <div class="container flex">
+                <div class="blurb">
+                    <h3>Surveyor</h3>
+                    <h4>Land and Utility Surveyor</h4>
+                    <h4>Geotec Surveys, 2016 - 2020</h4>
+                    <hr>
+                    <p>
+                        I've spent the last four years planning and managing land and utility surveys across the UK,
+                        detecting and mapping underground utilities to PAS-128 standards.
+                        Experience working with highways, railways and electrical substations.
+                    </p>
+                    <hr>
+                </div>
+                <div class="banner">
+                    <img src="./img/surveyor/banner.png" alt="A construction site">
+                </div>
+                <div class="content">
+                    <img src="./img/game/click-me.png" id="click-me" alt="Click me to start the game!">
+                    <article>
+                        <div>
+                            <img src="./img/surveyor/icon/theodolite.png" id="theodolite" alt="It shoot lasers!">
+                        </div>
+                        <div>
+                            <h5>Topography</h5>
+                            <p>Detailed topographical land surveys using Leica Total Stations
+                                and GPS / GNSS RTK technology.</p>
+                        </div>
+                    </article>
+                    <article>
+                        <div>
+                            <img src="./img/surveyor/icon/pisa.png" alt="The Leaning Tower of Pisa, needs a survey.">
+                        </div>
+                        <div>
+                            <h5>Buildings</h5>
+                            <p>Measured building surveys, floor-plans, internal and external
+                                elevations, and cross-sections.</p>
+                        </div>
+                    </article>
+                    <article>
+                        <div>
+                            <img src="./img/game/switch.png" id="switch" alt="What does this switch do?">
+                            <img src="./img/surveyor/icon/manhole.png" id="cover" alt="An open manhole">
+                        </div>
+                        <div>
+                            <h5>Utilities</h5>
+                            <p>Non-invasive utility detection to PAS-128 standards using EM
+                                locators and GPR.</p>
+                        </div>
+                    </article>
+                    <article>
+                        <div>
+                            <img src="./img/surveyor/icon/3d.png" alt="A 3-D cube">
+                        </div>
+                        <div>
+                            <h5>Laser Scanning</h5>
+                            <p>Leica RTC360 laser scanner, processing 3D point clouds in
+                                Cyclone and PointCab.</p>
+                        </div>
+                    </article>
+                    <article>
+                        <div>
+                            <img src="./img/surveyor/icon/geology.png" alt="Soil layers">
+                        </div>
+                        <div>
+                            <h5>Radar</h5>
+                            <p>Locating voids and anomalies, structural and buried features
+                                with GSSI SIR and IDS systems. </p>
+                        </div>
+                    </article>
+                    <article>
+                        <div>
+                            <img src="./img/surveyor/icon/cad.png" alt="AutoCAD">
+                        </div>
+                        <div>
+                            <h5>AutoCAD and GIS</h5>
+                            <p>Modelling 2D and 3D deliverables, interpreting statutory
+                                information and automating LISP routines.</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <hr><a id="a-contact"></a>
+
+        <section id="contact">
+            <div class="container flex">
+                <div class="title">
+                    <h3>Contact me</h3>
+                    <hr>
+                </div>
+                <div class="form">
+                    <form id="email-form" action="mailto:afcameron@gmail.com" method="post" enctype="text/plain">
+                        <input type="text" id="form-name" class="form-input" name="name" placeholder="your name"
+                            required> <br>
+                        <input type="email" id="form-email" class="form-input" name="email" placeholder="your e-mail"
+                            required> <br>
+                        <textarea form="email-form" id="form-message" class="form-input" name="message" rows="6"
+                            placeholder="message" required></textarea> <br>
+                        <button>Send</button">
+                    </form>
+                </div>
+                <div class="info">
+                    <div class="paragraph">
+                        <p>
+                            Thanks for dropping by. For any work, information or just general feedback, please drop
+                            me a line using the form or the e-mail address provided.
+                            Or, if want to learn a little more about me and follow my progress, catch me on LinkedIn
+                            or Twitter - links below.
+                        </p>
+                    </div>
+                    <div class="links">
+                        <div class="address">
+                            <div>
+                                <img src="./img/contact/email.png" alt="E-mail:">
+                            </div>
+                            <div>
+                                <h5>afcameron@gmail.com</h5>
+                            </div>
+                        </div>
+                        <div class="social-media">
+                            <p>Follow me on:</p>
+                            <a href="https://www.linkedin.com/in/a67/" target="_blank"><img
+                                    src="./img/contact/linkedin.png" alt="Go to LinkedIn"></a>
+                            <a href="https://www.github.com/andfcam" target="_blank"><img src="./img/contact/github.png"
+                                    alt="Go to GitHub"></a>
+                        </div>
+                    </div>
+                    <div class="avatar">
+                        <img src="img/avatar.png" alt="Andy Cameron's avatar">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <p>All images are currently placeholders. Placeholder icons made by
+                <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a>,
+                <a href="https://www.flaticon.com/authors/surang" title="surang">surang</a>,
+                <a href="https://www.flaticon.com/authors/monkik" title="monkik">monkik</a>,
+                <a href="https://www.flaticon.com/authors/smashicons" title="Smashicons">Smashicons</a> and
+                <a href="https://www.flaticon.com/authors/nikita-golubev" title="Nikita Golubev">Nikita Golubev</a>
+                from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a>.
+            </p>
+        </footer>
+
+    </main>
+</body>
+
+</html>
